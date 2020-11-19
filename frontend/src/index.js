@@ -1,11 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
+import configureStore from "./store";
+
+const store = configureStore();
+
+if (process.env.NODE_ENV !== "production") {
+	window.store = store;
+}
+
+function Root() {
+	return (
+		<Provider store={store}>
+			<Router>
+				<App />
+			</Router>
+		</Provider>
+	);
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Root />
+	</React.StrictMode>,
+	document.getElementById("root")
 );
