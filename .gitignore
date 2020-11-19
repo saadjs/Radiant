@@ -38,6 +38,8 @@ bower_components
 build/Release
 
 # Dependency directories
+backend/node_modules/
+fronend/node_modules/
 node_modules/
 jspm_packages/
 
@@ -70,6 +72,8 @@ web_modules/
 
 # dotenv environment variables file
 .env
+backend/.env
+frontend/.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
