@@ -27,17 +27,18 @@ function LoginFormPage() {
 
 	return (
 		<div className="container">
-			<form onSubmit={handleSubmit}>
+			<h2>Login</h2>
+			<form id="login" onSubmit={handleSubmit}>
 				<ul>
 					{errors.map((error, idx) => (
 						<li key={idx}>{error}</li>
 					))}
 				</ul>
-				<label className="label">
+
+				<label className="login">
 					Username or Email
 					<input
 						type="text"
-						className="input"
 						value={credential}
 						onChange={(e) => setCredential(e.target.value)}
 						required
