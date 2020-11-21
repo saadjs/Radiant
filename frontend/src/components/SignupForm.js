@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import * as sessionActions from "../../store/session";
+import * as sessionActions from "../store/session";
+
 import "./SignUpForm.css";
 
 function SignupFormPage() {
@@ -31,7 +32,7 @@ function SignupFormPage() {
 	};
 
 	return (
-		<div className="container">
+		<div className="signup-container">
 			<h2>Sign Up</h2>
 			<form onSubmit={handleSubmit}>
 				<ul>
@@ -42,7 +43,7 @@ function SignupFormPage() {
 				<label>
 					Email
 					<input
-						type="text"
+						type="email"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						required

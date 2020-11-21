@@ -1,0 +1,16 @@
+ul {
+	list-style-type: none;
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	align-items: space;
+	justify-content: space-around;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(130, 71, 0);
+	font-weight: 500;
+}

@@ -13,25 +13,19 @@ function Navigation({ isLoaded }) {
 	} else {
 		sessionLinks = (
 			<>
-				<div>
-					<NavLink to="/login">Log In</NavLink>
-				</div>
-				<div>
-					<NavLink to="/signup">Sign Up</NavLink>
-				</div>
+				{/* <NavLink to="/login">Log In</NavLink> */}
+				{/* <NavLink to="/signup">Sign Up</NavLink> */}
 			</>
 		);
 	}
 
 	return (
-		<ul>
-			<li>
-				<NavLink exact to="/">
-					Home
-				</NavLink>
-				{isLoaded && sessionLinks}
-			</li>
-		</ul>
+		<div className="links">
+			<NavLink exact to="/">
+				Home
+			</NavLink>
+			{isLoaded && sessionLinks}
+		</div>
 	);
 }
 
