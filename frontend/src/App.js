@@ -7,6 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Song from "./components/Song";
 import SongControls from "./components/SongControls";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function App() {
 	const dispatch = useDispatch();
@@ -18,22 +19,34 @@ function App() {
 		<>
 			<Navigation isLoaded={isLoaded} />
 			{isLoaded && (
-				<Switch>
-					<Route path="/signup">
-						<SignupFormPage />
-					</Route>
+				<Route
+					render={({ location }) => (
+						<TransitionGroup>
+							<CSSTransition
+								timeout={10000}
+								classNames="fade"
+								key={location.key}
+							>
+								<Switch>
+									<Route path="/signup">
+										<SignupFormPage />
+									</Route>
 
-					<Route path="/songs">
-						<Song />
-						<SongControls />
-					</Route>
-					<Route path="/login">
-						<LoginFormPage />
-					</Route>
-					<Route path="*">
-						<LoginFormPage />
-					</Route>
-				</Switch>
+									<Route path="/songs">
+										<Song />
+										<SongControls />
+									</Route>
+									<Route path="/login">
+										<LoginFormPage />
+									</Route>
+									<Route path="*">
+										<LoginFormPage />
+									</Route>
+								</Switch>
+							</CSSTransition>
+						</TransitionGroup>
+					)}
+				/>
 			)}
 		</>
 	);
