@@ -49,7 +49,6 @@ function LoginFormPage() {
 				/>
 				<input
 					type="password"
-					className="input"
 					// value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					required
