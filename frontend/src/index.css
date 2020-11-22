@@ -1,42 +1,6 @@
-/* @import "./components/Main/Controls/Control.css";
-@import "./components/Main/Song/Song.css"; */
-body {
-}
 * {
 	margin: 0;
 	padding: 0;
-	/* box-sizing: border-box; */
-	overflow-y: hidden;
-}
-
-.signup-container,
-#main-holder {
-	/* position: absolute; */
-	position: relative;
-	top: 10px;
-	left: 0;
-	right: 0;
-}
-/* #control-container,
-#file-container {
-	position: relative;
-} */
-.fade-appear,
-.fade-enter {
-	opacity: 0;
-	z-index: 1;
-}
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-	opacity: 1;
-	transition: opacity 500ms linear 150ms;
-}
-
-.fade-exit {
-	opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-	opacity: 0;
-	transition: opacity 150ms linear;
+	box-sizing: border-box;
+	/* overflow-y: hidden; */
 }

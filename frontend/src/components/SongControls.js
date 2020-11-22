@@ -9,7 +9,7 @@ import {
 
 function Controls() {
 	return (
-		<div className="control-container">
+		<div className="control-container ">
 			<div className="timer">
 				<p>Start Time</p>
 				<input type="range" />

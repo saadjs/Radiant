@@ -63,6 +63,7 @@ function SignupFormPage() {
 				/>
 				<input
 					type="password"
+					autoComplete="on"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					placeholder="Password"
@@ -70,6 +71,7 @@ function SignupFormPage() {
 				/>
 				<input
 					type="password"
+					autoComplete="on"
 					value={confirmPassword}
 					onChange={(e) => setConfirmPassword(e.target.value)}
 					placeholder="Confirm password"
