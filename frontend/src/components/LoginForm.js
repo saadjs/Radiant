@@ -23,6 +23,14 @@ function LoginFormPage() {
 		);
 	};
 
+	const loginDemo = (e) => {
+		dispatch(
+			sessionActions.login({
+				credential: "Demo-lition",
+				password: "password"
+			})
+		);
+	};
 	// const onClick = () => history.push("/songs");
 
 	return (
@@ -60,6 +68,12 @@ function LoginFormPage() {
 					value="I DARE TO ENTER"
 					id="login-form-submit"
 					// onClick={onClick}
+				/>
+				<input
+					id="login-form-submit"
+					type="button"
+					value="Login as Demo"
+					onClick={loginDemo}
 				/>
 			</form>
 			<NavLink id="sign-up-link" to="/signup">
