@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { NavLink, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import * as sessionActions from "./../store/session";
 
 function ProfileButton({ user }) {
@@ -29,11 +29,11 @@ function ProfileButton({ user }) {
 	const logout = (e) => {
 		e.preventDefault();
 		dispatch(sessionActions.logout());
-		history.push("/");
+		history.push("/login");
 	};
 
 	return (
-		<>
+		<div>
 			{/* <button onClick={openMenu}>User Profile</button> */}
 			{/* {showMenu && (
 				<ul className="profile-dropdown">
@@ -50,7 +50,7 @@ function ProfileButton({ user }) {
 				{user.username.charAt(0).toUpperCase() + user.username.slice(1)}
 			</p>
 			<button onClick={logout}>Logout</button>
-		</>
+		</div>
 	);
 }
 

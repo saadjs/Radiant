@@ -27,13 +27,17 @@ function LoginFormPage() {
 
 	return (
 		<div id="main-holder">
-			<h1 id="login-header">Login</h1>
+			<img
+				id="logo-img"
+				src="https://www.freelogodesign.org/file/app/client/thumb/2b78cf08-0ba2-48a6-acc4-4eb188527d65_200x200.png?1606005029119"
+				alt="logo"
+			/>
+			<h1 id="login-heading">Login</h1>
 			<div id="login-error-msg-holder">
 				{errors.map((error, idx) => (
 					<p key={idx}>{error}</p>
 				))}
 			</div>
-
 			<form id="login-form" onSubmit={handleSubmit}>
 				<input
 					type="text"
@@ -54,12 +58,14 @@ function LoginFormPage() {
 				/>
 				<input
 					type="submit"
-					value="Login"
+					value="I DARE TO ENTER"
 					id="login-form-submit"
 					// onClick={onClick}
 				/>
 			</form>
-			<NavLink to="/signup">Sign Up</NavLink>
+			<NavLink id="sign-up-link" to="/signup">
+				Ohh.. That Didn't work? Claim an account...
+			</NavLink>
 		</div>
 	);
 }
