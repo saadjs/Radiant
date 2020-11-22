@@ -7,6 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Song from "./components/Song";
 import SongControls from "./components/SongControls";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 	const dispatch = useDispatch();

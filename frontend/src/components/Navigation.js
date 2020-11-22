@@ -1,31 +1,49 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import * as sessionActions from "./../store/session";
+
 import { useSelector } from "react-redux";
-import ProfileButton from "./ProfileButton";
+import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
+	const dispatch = useDispatch();
+	const history = useHistory();
+
 	const sessionUser = useSelector((state) => state.session.user);
 
-	let sessionLinks;
-	if (sessionUser) {
-		sessionLinks = <ProfileButton user={sessionUser} />;
-	} else {
-		sessionLinks = (
-			<>
-				{/* <NavLink to="/login">Log In</NavLink> */}
-				{/* <NavLink to="/signup">Sign Up</NavLink> */}
-			</>
-		);
-	}
+	const logout = (e) => {
+		e.preventDefault();
+		dispatch(sessionActions.logout());
+		history.push("/login");
+	};
 
 	return (
-		<div className="links">
-			{/* <NavLink exact to="/">
-				Home
-			</NavLink> */}
-			{isLoaded && sessionLinks}
-		</div>
+		<>
+			<Navbar>
+				<Navbar.Brand href="/" className="navbar-home">
+					Home
+				</Navbar.Brand>
+				<Navbar.Toggle />
+				<Navbar.Collapse className="justify-content-end">
+					{sessionUser && (
+						<Navbar.Text className="hello-user-text">
+							{`Hello, ${
+								sessionUser.username.charAt(0).toUpperCase() +
+								sessionUser.username.slice(1)
+							}!	`}
+							<input
+								className="logout-input-button"
+								type="button"
+								value="Logout"
+								onClick={logout}
+							/>
+						</Navbar.Text>
+					)}
+				</Navbar.Collapse>
+			</Navbar>
+		</>
 	);
 }
 

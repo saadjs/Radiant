@@ -1,16 +1,13 @@
-ul {
-	list-style-type: none;
+.logout-input-button,
+.navbar-home,
+.hello-user-text {
+	font-family: cursive;
+	padding: 3px;
+	margin: 3px;
 }
 
-.links {
-	display: flex;
-	flex-direction: row;
-	align-items: space;
-	justify-content: space-around;
-}
-
-a {
-	text-decoration: none;
-	color: rgb(130, 71, 0);
-	font-weight: 500;
+.logout-input-button {
+	background-color: rgba(240, 223, 186, 0.5);
+	color: grey;
+	border: 1px solid rgb(235, 188, 34);
 }
