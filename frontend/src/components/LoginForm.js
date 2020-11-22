@@ -57,6 +57,7 @@ function LoginFormPage() {
 				/>
 				<input
 					type="password"
+					autoComplete="on"
 					// value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					required
@@ -70,7 +71,7 @@ function LoginFormPage() {
 					// onClick={onClick}
 				/>
 				<input
-					id="login-form-submit"
+					id="login-form-submit-demo"
 					type="button"
 					value="Login as Demo"
 					onClick={loginDemo}

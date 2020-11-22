@@ -32,7 +32,8 @@
 	font-size: 20px;
 }
 
-#login-form-submit {
+#login-form-submit,
+#login-form-submit-demo {
 	justify-content: center;
 	font-family: cursive;
 	font-size: 1em;

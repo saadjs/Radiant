@@ -23,11 +23,11 @@ function App() {
 					render={({ location }) => (
 						<TransitionGroup>
 							<CSSTransition
-								timeout={10000}
+								timeout={500}
 								classNames="fade"
 								key={location.key}
 							>
-								<Switch>
+								<Switch location={location}>
 									<Route path="/signup">
 										<SignupFormPage />
 									</Route>
@@ -36,6 +36,7 @@ function App() {
 										<Song />
 										<SongControls />
 									</Route>
+
 									<Route path="/login">
 										<LoginFormPage />
 									</Route>
