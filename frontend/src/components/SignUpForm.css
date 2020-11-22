@@ -1,12 +1,11 @@
 .signup-container {
-	min-height: 60vh;
+	min-height: 80vh;
 	min-width: 40vw;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	font-family: cursive;
-	border: 1px solid black;
 }
 
 #signup-form {
