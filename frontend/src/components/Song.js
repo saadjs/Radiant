@@ -8,7 +8,6 @@ function Song() {
 	const sessionUser = useSelector((state) => state.session.user);
 
 	if (!sessionUser) return <Redirect to="/login" />;
-
 	return (
 		<div className="file-container">
 			<h1>Photo</h1>

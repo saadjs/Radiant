@@ -9,7 +9,7 @@ router.get(
 	asyncHandler(async (req, res) => {
 		const songs = await Songs.findAll();
 
-		res.json(songs);
+		res.send(songs);
 	})
 );
 

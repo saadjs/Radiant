@@ -12,9 +12,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
 	const dispatch = useDispatch();
 	const [isLoaded, setIsLoaded] = useState(false);
+
+	const [songs, setSongs] = useState([]);
+	const [currentSong, setCurrentSong] = useState(songs[0]);
+
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
 	}, [dispatch]);
+
+	useEffect(() => {
+		fetch("http://localhost:8000/songs")
+			.then((data) => data.json())
+			.then((songsData) => {
+				setSongs(songsData);
+				setCurrentSong(songsData[0]);
+			});
+	}, []);
+
 	return (
 		<>
 			<Navigation isLoaded={isLoaded} />
