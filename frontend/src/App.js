@@ -14,7 +14,8 @@ function App() {
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	const [songs, setSongs] = useState([]);
-	const [currentSong, setCurrentSong] = useState(songs[0]);
+	const [playing, setPlaying] = useState(songs[0]);
+	const [isPlaying, setIsPlaying] = useState(false);
 
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
@@ -25,7 +26,7 @@ function App() {
 			.then((data) => data.json())
 			.then((songsData) => {
 				setSongs(songsData);
-				setCurrentSong(songsData[0]);
+				setPlaying(songsData[1]);
 			});
 	}, []);
 
@@ -41,8 +42,12 @@ function App() {
 						path="/songs"
 						render={() => (
 							<div>
-								<Song />
-								<SongControls />
+								<Song playing={playing} />
+								<SongControls
+									setIsPlaying={setIsPlaying}
+									isPlaying={isPlaying}
+									playing={playing}
+								/>
 							</div>
 						)}
 					/>

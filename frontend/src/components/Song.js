@@ -4,15 +4,15 @@ import { Redirect } from "react-router-dom";
 
 import "./Song.css";
 
-function Song() {
+function Song({ playing }) {
 	const sessionUser = useSelector((state) => state.session.user);
 
 	if (!sessionUser) return <Redirect to="/login" />;
 	return (
 		<div className="file-container">
-			<h1>Photo</h1>
-			<h1>Song Name</h1>
-			<h1>Artist</h1>
+			<img src={playing.photo} alt={playing.songName} />
+			<h2>{playing.songName}</h2>
+			<h3>{playing.artist}</h3>
 		</div>
 	);
 }

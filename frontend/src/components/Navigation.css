@@ -1,7 +1,7 @@
 .logout-input-button,
 .navbar-home,
 .hello-user-text {
-	font-family: cursive;
+	font-family: "Ubuntu", sans-serif;
 	padding: 3px;
 	margin: 3px;
 }

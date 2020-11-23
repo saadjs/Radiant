@@ -5,3 +5,16 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.file-container img {
+	width: 20%;
+	border-radius: 5%;
+}
+
+.file-container h2 {
+	padding: 3rem 1rem 1rem 1rem;
+}
+
+.file-container h3 {
+	font-size: 1rem;
+}
