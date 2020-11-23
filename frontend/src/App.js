@@ -26,7 +26,7 @@ function App() {
 			.then((data) => data.json())
 			.then((songsData) => {
 				setSongs(songsData);
-				setPlaying(songsData[1]);
+				setPlaying(songsData[5]);
 			});
 	}, []);
 
