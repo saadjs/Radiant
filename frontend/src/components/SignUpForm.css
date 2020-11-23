@@ -35,3 +35,8 @@
 #signup-heading {
 	color: rgba(198, 46, 0, 0.8);
 }
+
+#back-to-login {
+	margin: auto;
+	font-size: 20px;
+}

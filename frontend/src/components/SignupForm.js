@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Link, NavLink, Redirect } from "react-router-dom";
 import * as sessionActions from "../store/session";
 
 import "./SignUpForm.css";
@@ -82,6 +82,9 @@ function SignupFormPage() {
 					value="Create Account"
 					id="signup-form-submit"
 				/>
+				<NavLink to="/login" id="back-to-login">
+					Already have an account?
+				</NavLink>
 			</form>
 		</div>
 	);
