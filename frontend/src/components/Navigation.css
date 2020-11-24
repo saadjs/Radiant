@@ -17,6 +17,7 @@
 }
 
 #playlist-nav-btn {
+	display: flex;
 	border: none;
 	background: transparent;
 	cursor: pointer;

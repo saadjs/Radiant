@@ -12,7 +12,7 @@ const Playlist = ({
 }) => {
 	return (
 		<div className={`playlist ${playlistStatus ? "active-playlist" : ""}`}>
-			<h2>Playlist</h2>
+			<h2>Tracks</h2>
 			<div className="playlist-songs">
 				{songs &&
 					songs.map((song) => (

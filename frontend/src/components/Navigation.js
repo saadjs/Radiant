@@ -24,20 +24,22 @@ function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 	return (
 		<>
 			<Navbar>
-				<Navbar.Brand
+				{/* <Navbar.Brand
 					href="/"
 					className="navbar-home"
 					id="navbar-home-btn"
 				>
 					Home
-				</Navbar.Brand>
-				<button
-					id="playlist-nav-btn"
-					onClick={() => setPlaylistStatus(!playlistStatus)}
-				>
-					<FontAwesomeIcon size="lg" icon={faCompactDisc} />
-					Playlist
-				</button>
+				</Navbar.Brand> */}
+				{sessionUser && (
+					<button
+						id="playlist-nav-btn"
+						onClick={() => setPlaylistStatus(!playlistStatus)}
+					>
+						<FontAwesomeIcon size="3x" icon={faCompactDisc} />
+						<h1>Playlist</h1>
+					</button>
+				)}
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
 					{sessionUser && (
