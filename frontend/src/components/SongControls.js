@@ -80,17 +80,29 @@ function Controls({
 	const formattedTime = (time) =>
 		Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2);
 
+	const trackAnim = {
+		transform: `translateX(${time.playTimePercent}%)`
+	};
 	return (
 		<div className="control-container ">
 			<div className="timer">
 				<p>{formattedTime(time.current)}</p>
-				<input
-					min={0}
-					max={time.length || 0}
-					value={time.current}
-					onChange={dragSlider}
-					type="range"
-				/>
+				<div
+					style={{
+						background: `linear-gradient(to right, ${playing.art[0]},${playing.art[1]})`
+					}}
+					className="track"
+				>
+					<input
+						min={0}
+						max={time.length || 0}
+						value={time.current}
+						onChange={dragSlider}
+						type="range"
+					/>
+					<div className="animate-track" style={trackAnim}></div>
+				</div>
+
 				<p>{time.length ? formattedTime(time.length) : "0:00"}</p>
 			</div>
 			<div className="play-pause">

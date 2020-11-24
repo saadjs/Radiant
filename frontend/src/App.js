@@ -22,13 +22,19 @@ function App() {
 
 	const [time, setTime] = useState({
 		current: 0,
-		length: 0
+		length: 0,
+		playTimePercent: 0
 	});
 
 	const timeUpdater = (e) => {
 		const current = e.target.currentTime;
 		const length = e.target.duration;
-		setTime({ ...time, current, length });
+		const roundedCurrent = Math.round(current);
+		const roundedLength = Math.round(length);
+		const animation = Math.round((roundedCurrent / roundedLength) * 100);
+		// console.log(animation);
+
+		setTime({ ...time, current, length, playTimePercent: animation });
 	};
 
 	useEffect(() => {

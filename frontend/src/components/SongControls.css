@@ -1,9 +1,16 @@
 .control-container {
-	min-height: 20vh;
+	min-height: 10vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.control-container input {
+	width: 100%;
+	-webkit-appearance: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 .timer {
@@ -31,4 +38,33 @@
 
 .play-pause svg {
 	cursor: pointer;
+}
+
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 16px;
+	width: 16px;
+}
+
+.track {
+	background: blue;
+	width: 100%;
+	position: relative;
+	border-radius: 1rem;
+	overflow: hidden;
+	/* height: 1rem; */
+}
+
+.animate-track {
+	background: grey;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(0%);
+	pointer-events: none;
 }
