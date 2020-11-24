@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SongControls.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -47,7 +47,7 @@ function Controls({
 				<p>{formattedTime(time.current)}</p>
 				<input
 					min={0}
-					max={time.length}
+					max={time.length || 0}
 					value={time.current}
 					onChange={dragSlider}
 					type="range"

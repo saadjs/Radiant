@@ -6,6 +6,9 @@
 	bottom: 5rem;
 	box-shadow: 2px 2px 50px gray;
 	overflow: scroll;
+	transform: translate(-100%);
+	transition: all 0.5s ease;
+	opacity: 0;
 }
 
 .playlist h2 {

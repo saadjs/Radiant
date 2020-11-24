@@ -6,6 +6,8 @@ import * as sessionActions from "./../store/session";
 import { useSelector } from "react-redux";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGuitar } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation({ isLoaded }) {
 	const dispatch = useDispatch();
@@ -22,9 +24,18 @@ function Navigation({ isLoaded }) {
 	return (
 		<>
 			<Navbar>
-				<Navbar.Brand href="/" className="navbar-home">
+				<Navbar.Brand
+					href="/"
+					className="navbar-home"
+					id="navbar-home-btn"
+				>
 					Home
 				</Navbar.Brand>
+				<button id="playlist-nav-btn">
+					<FontAwesomeIcon size="lg" icon={faGuitar} />
+					Playlist
+				</button>
+
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
 					{sessionUser && (
