@@ -9,6 +9,7 @@
 	transform: translate(-100%);
 	transition: all 0.5s ease;
 	opacity: 0;
+	background: white;
 }
 
 .playlist h2 {
@@ -69,4 +70,10 @@
 .active-playlist {
 	transform: translateX(0%);
 	opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+	.playlist {
+		width: 100%;
+	}
 }

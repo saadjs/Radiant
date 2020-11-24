@@ -11,3 +11,11 @@ h4 {
 	color: rgb(104, 122, 223);
 	font-family: "Ubuntu", sans-serif;
 }
+
+#everything {
+	transition: all 0.5s ease;
+}
+
+.playlist-active {
+	margin: 0% 10%;
+}

@@ -63,51 +63,55 @@ function App() {
 				playlistStatus={playlistStatus}
 				setPlaylistStatus={setPlaylistStatus}
 			/>
+			<div
+				className={`${playlistStatus ? "playlist-active" : ""}`}
+				id="everything"
+			>
+				{isLoaded && (
+					<Switch>
+						<Route path="/signup" component={SignupFormPage} />
 
-			{isLoaded && (
-				<Switch>
-					<Route path="/signup" component={SignupFormPage} />
+						<Route
+							path="/songs"
+							render={() => (
+								<div>
+									<Song playing={playing} />
+									<SongControls
+										songs={songs}
+										audioRef={audioRef}
+										setIsPlaying={setIsPlaying}
+										isPlaying={isPlaying}
+										playing={playing}
+										setTime={setTime}
+										time={time}
+										setPlaying={setPlaying}
+										setSongs={setSongs}
+									/>
+									<Playlist
+										playlistStatus={playlistStatus}
+										songs={songs}
+										setSongs={setSongs}
+										setPlaying={setPlaying}
+										audioRef={audioRef}
+										isPlaying={isPlaying}
+									/>
+									<audio
+										ref={audioRef}
+										src={playing.mp3}
+										onTimeUpdate={timeUpdater}
+										onLoadedMetadata={timeUpdater}
+										onEnded={onEndedHandler}
+									></audio>
+								</div>
+							)}
+						/>
 
-					<Route
-						path="/songs"
-						render={() => (
-							<div>
-								<Song playing={playing} />
-								<SongControls
-									songs={songs}
-									audioRef={audioRef}
-									setIsPlaying={setIsPlaying}
-									isPlaying={isPlaying}
-									playing={playing}
-									setTime={setTime}
-									time={time}
-									setPlaying={setPlaying}
-									setSongs={setSongs}
-								/>
-								<Playlist
-									playlistStatus={playlistStatus}
-									songs={songs}
-									setSongs={setSongs}
-									setPlaying={setPlaying}
-									audioRef={audioRef}
-									isPlaying={isPlaying}
-								/>
-								<audio
-									ref={audioRef}
-									src={playing.mp3}
-									onTimeUpdate={timeUpdater}
-									onLoadedMetadata={timeUpdater}
-									onEnded={onEndedHandler}
-								></audio>
-							</div>
-						)}
-					/>
+						<Route path="/" component={LoginFormPage} />
 
-					<Route path="/" component={LoginFormPage} />
-
-					<Route exact path="/" component={LoginFormPage} />
-				</Switch>
-			)}
+						<Route exact path="/" component={LoginFormPage} />
+					</Switch>
+				)}
+			</div>
 		</>
 	);
 }
