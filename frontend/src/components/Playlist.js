@@ -2,9 +2,16 @@ import React from "react";
 import PlaylistSong from "./PlaylistSong";
 import "./Playlist.css";
 
-const Playlist = ({ songs, setPlaying, audioRef, isPlaying, setSongs }) => {
+const Playlist = ({
+	songs,
+	setPlaying,
+	audioRef,
+	isPlaying,
+	setSongs,
+	playlistStatus
+}) => {
 	return (
-		<div className="playlist">
+		<div className={`playlist ${playlistStatus ? "active-playlist" : ""}`}>
 			<h2>Playlist</h2>
 			<div className="playlist-songs">
 				{songs &&

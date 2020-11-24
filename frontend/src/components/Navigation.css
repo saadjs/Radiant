@@ -10,6 +10,7 @@
 	background-color: rgb(206, 228, 255);
 	color: grey;
 	border: 1px solid rgb(235, 188, 34);
+	transition: all 0.3s ease;
 }
 .logout-input-button:hover {
 	background-color: rgb(255, 157, 180);
@@ -21,8 +22,15 @@
 	cursor: pointer;
 	padding: 0.5rem;
 	transition: all 0.3s ease;
+	font-family: "Ubuntu", sans-serif;
 }
+
+#navbar-home-btn {
+	transition: all 0.3s ease;
+}
+
 #playlist-nav-btn:hover,
 #navbar-home-btn:hover {
 	background-color: rgb(42, 235, 136);
+	color: white;
 }

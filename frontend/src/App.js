@@ -17,11 +17,13 @@ function App() {
 	const [songs, setSongs] = useState();
 	const [playing, setPlaying] = useState([]);
 	const [isPlaying, setIsPlaying] = useState(false);
+	const [playlistStatus, setPlaylistStatus] = useState(false);
 	const audioRef = useRef(null);
 	const [time, setTime] = useState({
 		current: 0,
 		length: 0
 	});
+
 	const timeUpdater = (e) => {
 		const current = e.target.currentTime;
 		const length = e.target.duration;
@@ -42,7 +44,11 @@ function App() {
 
 	return (
 		<>
-			<Navigation isLoaded={isLoaded} />
+			<Navigation
+				isLoaded={isLoaded}
+				playlistStatus={playlistStatus}
+				setPlaylistStatus={setPlaylistStatus}
+			/>
 
 			{isLoaded && (
 				<Switch>
@@ -62,6 +68,7 @@ function App() {
 									time={time}
 								/>
 								<Playlist
+									playlistStatus={playlistStatus}
 									songs={songs}
 									setSongs={setSongs}
 									setPlaying={setPlaying}

@@ -7,9 +7,9 @@ import { useSelector } from "react-redux";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGuitar } from "@fortawesome/free-solid-svg-icons";
+import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
 
-function Navigation({ isLoaded }) {
+function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 	const dispatch = useDispatch();
 	const history = useHistory();
 
@@ -31,11 +31,13 @@ function Navigation({ isLoaded }) {
 				>
 					Home
 				</Navbar.Brand>
-				<button id="playlist-nav-btn">
-					<FontAwesomeIcon size="lg" icon={faGuitar} />
+				<button
+					id="playlist-nav-btn"
+					onClick={() => setPlaylistStatus(!playlistStatus)}
+				>
+					<FontAwesomeIcon size="lg" icon={faCompactDisc} />
 					Playlist
 				</button>
-
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
 					{sessionUser && (

@@ -64,3 +64,8 @@
 .selected {
 	background: rgb(42, 235, 136);
 }
+
+.active-playlist {
+	transform: translateX(0%);
+	opacity: 1;
+}
