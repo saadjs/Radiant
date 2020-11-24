@@ -36,8 +36,8 @@ function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 						id="playlist-nav-btn"
 						onClick={() => setPlaylistStatus(!playlistStatus)}
 					>
-						<FontAwesomeIcon size="3x" icon={faCompactDisc} />
-						<h1>Playlist</h1>
+						<FontAwesomeIcon size="2x" icon={faCompactDisc} />
+						<h3 className="playlist-heading-h3">Playlist</h3>
 					</button>
 				)}
 				<Navbar.Toggle />

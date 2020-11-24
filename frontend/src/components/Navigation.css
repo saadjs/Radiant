@@ -35,3 +35,12 @@
 	background-color: rgb(42, 235, 136);
 	color: white;
 }
+
+#left-nav {
+	display: flex;
+	padding: 0.2rem;
+}
+
+.playlist-heading-h3 {
+	margin-left: 0.5rem;
+}
