@@ -14,8 +14,8 @@ function App() {
 	const dispatch = useDispatch();
 	const [isLoaded, setIsLoaded] = useState(false);
 
-	const [songs, setSongs] = useState([]);
-	const [playing, setPlaying] = useState(songs[0]);
+	const [songs, setSongs] = useState();
+	const [playing, setPlaying] = useState([]);
 	const [isPlaying, setIsPlaying] = useState(false);
 
 	useEffect(() => {
@@ -49,7 +49,7 @@ function App() {
 									isPlaying={isPlaying}
 									playing={playing}
 								/>
-								<Playlist songs={songs} />
+								<Playlist songs={songs} isPlaying={isPlaying} />
 							</div>
 						)}
 					/>

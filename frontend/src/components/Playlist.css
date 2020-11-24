@@ -3,7 +3,7 @@
 	top: 5rem;
 	left: 0;
 	width: 20rem;
-	height: 100%;
+	bottom: 5rem;
 	box-shadow: 2px 2px 50px gray;
 	overflow: scroll;
 }
@@ -24,7 +24,7 @@
 }
 
 .playlist-song:hover {
-	background: rgb(146, 195, 255);
+	background: rgb(206, 228, 255);
 }
 
 .song-info {
