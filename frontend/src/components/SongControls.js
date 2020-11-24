@@ -87,7 +87,7 @@ function Controls({
 				<p>{formattedTime(time.current)}</p>
 				<div
 					style={{
-						background: `linear-gradient(to right, ${playing.art[0]},${playing.art[1]})`
+						background: `linear-gradient(to left, ${playing.art[0]},${playing.art[1]})`
 					}}
 					className="track"
 				>
@@ -103,7 +103,7 @@ function Controls({
 
 				<p>{time.length ? formattedTime(time.length) : "0:00"}</p>
 			</div>
-			<div className="play-pause">
+			<div className="play-pause" style={{ color: `${playing.art[0]}` }}>
 				<FontAwesomeIcon
 					onClick={() => nextLastSongHandler("rewind")}
 					className="rewind"

@@ -2,11 +2,6 @@
 
 module.exports = {
 	up: async (queryInterface, Sequelize) => {
-		/**
-		 * Add seed commands here.
-		 *
-		 * Example:
-		 */
 		await queryInterface.bulkInsert(
 			"Songs",
 			[
@@ -22,23 +17,12 @@ module.exports = {
 					updatedAt: new Date()
 				},
 				{
-					songName: "Little Spirit",
-					photo:
-						"https://chillhop.com/wp-content/uploads/2020/07/6263175f6334ac348613790b863794010f2a9524-1024x1024.jpg",
-					artist: "Delayde",
-					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8547",
-					art: ["#F9F9F9", "#4C3B6A"],
-					isPlaying: false,
-					createdAt: new Date(),
-					updatedAt: new Date()
-				},
-				{
 					songName: "Calm",
 					photo:
 						"https://chillhop.com/wp-content/uploads/2020/06/d9d8ae69141cb7838e3c53bbf393c6218285e384-1024x1024.jpg",
 					artist: "ØDYSSEE, Florent Garcia",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9285",
-					art: ["#FEC9BE", "#05004D"],
+					art: ["#14277F", "#05004D"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -137,7 +121,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/ae91385fc2d92e40dd4bf337867dee16fb5648d2-1024x1024.jpg",
 					artist: "Clap Cotton",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9447",
-					art: ["#D0EB84", "#ADF1E1"],
+					art: ["#465843", "#ADF1E1"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -149,6 +133,17 @@ module.exports = {
 					artist: "Miscél",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9305",
 					art: ["#AA476D", "#E58CB9"],
+					isPlaying: false,
+					createdAt: new Date(),
+					updatedAt: new Date()
+				},
+				{
+					songName: "Little Spirit",
+					photo:
+						"https://chillhop.com/wp-content/uploads/2020/07/6263175f6334ac348613790b863794010f2a9524-1024x1024.jpg",
+					artist: "Delayde",
+					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8547",
+					art: ["#CA5261", "#4C3B6A"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -258,7 +253,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/9ba130514bcb5697e8a9be6a93fa2c8fc88223d0-1024x1024.jpg",
 					artist: "No Spirit",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8068",
-					art: ["#CAB1B5", "#4A2027"],
+					art: ["#8C5A63", "#4A2027"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -269,7 +264,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/50758f405d2aba9cd6e8c4e6cfce44e4d9893714-1024x1024.jpg",
 					artist: "Ian Ewing",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=7964",
-					art: ["#2B2640", "#CF3571"],
+					art: ["#DE3868", "#CF3571"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -291,11 +286,6 @@ module.exports = {
 	},
 
 	down: async (queryInterface, Sequelize) => {
-		/**
-		 * Add commands to revert seed here.
-		 *
-		 * Example:
-		 */
 		await queryInterface.bulkDelete("Songs", null, {});
 	}
 };
