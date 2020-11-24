@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginForm";
@@ -17,7 +17,16 @@ function App() {
 	const [songs, setSongs] = useState();
 	const [playing, setPlaying] = useState([]);
 	const [isPlaying, setIsPlaying] = useState(false);
-
+	const audioRef = useRef(null);
+	const [time, setTime] = useState({
+		current: 0,
+		length: 0
+	});
+	const timeUpdater = (e) => {
+		const current = e.target.currentTime;
+		const length = e.target.duration;
+		setTime({ ...time, current, length });
+	};
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
 	}, [dispatch]);
@@ -45,14 +54,26 @@ function App() {
 							<div>
 								<Song playing={playing} />
 								<SongControls
+									audioRef={audioRef}
 									setIsPlaying={setIsPlaying}
 									isPlaying={isPlaying}
 									playing={playing}
+									setTime={setTime}
+									time={time}
 								/>
 								<Playlist
 									songs={songs}
+									setSongs={setSongs}
 									setPlaying={setPlaying}
+									audioRef={audioRef}
+									isPlaying={isPlaying}
 								/>
+								<audio
+									ref={audioRef}
+									src={playing.mp3}
+									onTimeUpdate={timeUpdater}
+									onLoadedMetadata={timeUpdater}
+								></audio>
 							</div>
 						)}
 					/>

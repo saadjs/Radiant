@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./SongControls.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,14 +8,15 @@ import {
 	faBackward
 } from "@fortawesome/free-solid-svg-icons";
 
-function Controls({ playing, isPlaying, setIsPlaying }) {
-	const [time, setTime] = useState({
-		current: 0,
-		length: 0
-	});
-
+function Controls({
+	playing,
+	isPlaying,
+	setIsPlaying,
+	audioRef,
+	setTime,
+	time
+}) {
 	// element references
-	const audioRef = useRef(null);
 
 	// Song Controls
 	const play = () => {
@@ -39,12 +40,6 @@ function Controls({ playing, isPlaying, setIsPlaying }) {
 	// thanks stackoverflow!!!
 	const formattedTime = (time) =>
 		Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2);
-
-	const timeUpdater = (e) => {
-		const current = e.target.currentTime;
-		const length = e.target.duration;
-		setTime({ ...time, current, length });
-	};
 
 	return (
 		<div className="control-container ">
@@ -77,12 +72,6 @@ function Controls({ playing, isPlaying, setIsPlaying }) {
 					size="2x"
 				/>
 			</div>
-			<audio
-				ref={audioRef}
-				src={playing.mp3}
-				onTimeUpdate={timeUpdater}
-				onLoadedMetadata={timeUpdater}
-			></audio>
 		</div>
 	);
 }

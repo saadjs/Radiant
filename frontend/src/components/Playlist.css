@@ -57,3 +57,7 @@
 	border-radius: 20px;
 	border: transparent;
 }
+
+.selected {
+	background: rgb(42, 235, 136);
+}
