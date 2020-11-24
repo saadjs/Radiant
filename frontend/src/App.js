@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import Song from "./components/Song";
 import SongControls from "./components/SongControls";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Playlist from "./components/Playlist";
 
 function App() {
 	const dispatch = useDispatch();
@@ -48,6 +49,7 @@ function App() {
 									isPlaying={isPlaying}
 									playing={playing}
 								/>
+								<Playlist songs={songs} />
 							</div>
 						)}
 					/>

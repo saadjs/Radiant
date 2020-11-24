@@ -2,12 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* overflow-y: hidden; */
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
 	color: rgb(104, 122, 223);
 	font-family: "Ubuntu", sans-serif;
 }
