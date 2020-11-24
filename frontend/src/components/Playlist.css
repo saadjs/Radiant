@@ -20,11 +20,12 @@
 }
 
 .playlist-song img {
-	width: 30%;
+	width: 40%;
+	border-radius: 50%;
 }
 
 .playlist-song:hover {
-	background: rgb(206, 228, 255);
+	background: rgb(202, 237, 219);
 }
 
 .song-info {
@@ -52,7 +53,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: rgb(205, 220, 244);
+	background-color: rgb(103, 238, 168);
 	border-radius: 20px;
 	border: transparent;
 }

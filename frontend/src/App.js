@@ -49,7 +49,10 @@ function App() {
 									isPlaying={isPlaying}
 									playing={playing}
 								/>
-								<Playlist songs={songs} isPlaying={isPlaying} />
+								<Playlist
+									songs={songs}
+									setPlaying={setPlaying}
+								/>
 							</div>
 						)}
 					/>
