@@ -70,6 +70,7 @@ function App() {
 									setTime={setTime}
 									time={time}
 									setPlaying={setPlaying}
+									setSongs={setSongs}
 								/>
 								<Playlist
 									playlistStatus={playlistStatus}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SongControls.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +7,7 @@ import {
 	faForward,
 	faBackward
 } from "@fortawesome/free-solid-svg-icons";
+import { playAudio } from "./util";
 
 function Controls({
 	playing,
@@ -16,9 +17,27 @@ function Controls({
 	setTime,
 	time,
 	songs,
-	setPlaying
+	setPlaying,
+	setSongs
 }) {
 	// element references
+	useEffect(() => {
+		const newSong = songs.map((song) => {
+			if (song.id === playing.id) {
+				return {
+					...song,
+					isPlaying: true
+				};
+			} else {
+				return {
+					...song,
+					isPlaying: false
+				};
+			}
+		});
+
+		setSongs(newSong);
+	}, [playing]);
 
 	// Song Controls
 	const play = () => {
@@ -47,10 +66,13 @@ function Controls({
 		if (skip === "rewind") {
 			if ((currentIdx - 1) % songs.length === -1) {
 				setPlaying(songs[songs.length - 1]);
+				playAudio(isPlaying, audioRef);
 				return;
 			}
 			setPlaying(songs[(currentIdx - 1) % songs.length]);
 		}
+		playAudio(isPlaying, audioRef);
+
 		// console.log(currentIdx + 1);
 	};
 
@@ -69,7 +91,7 @@ function Controls({
 					onChange={dragSlider}
 					type="range"
 				/>
-				<p>{formattedTime(time.length)}</p>
+				<p>{time.length ? formattedTime(time.length) : "0:00"}</p>
 			</div>
 			<div className="play-pause">
 				<FontAwesomeIcon
