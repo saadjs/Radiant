@@ -8,6 +8,7 @@
 
 .file-container img {
 	width: 20%;
+	box-shadow: 2px 2px 50px rgb(247, 181, 181);
 	border-radius: 5%;
 }
 
