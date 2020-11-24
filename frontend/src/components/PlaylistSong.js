@@ -28,11 +28,8 @@ function PlaylistSong({
 				};
 			}
 		});
-		// console.log({ newSong });
 
 		setSongs(newSong);
-
-		console.log(isPlaying);
 
 		if (isPlaying) {
 			const playPromise = audioRef.current.play();

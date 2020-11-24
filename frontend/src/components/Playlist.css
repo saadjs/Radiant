@@ -1,9 +1,9 @@
 .playlist {
 	position: fixed;
-	top: 5rem;
+	top: 5.5rem;
 	left: 0;
 	width: 20rem;
-	bottom: 5rem;
+	bottom: 2.5rem;
 	box-shadow: 2px 2px 50px gray;
 	overflow: scroll;
 	transform: translate(-100%);
@@ -12,7 +12,8 @@
 }
 
 .playlist h2 {
-	padding: 2rem;
+	padding-top: 0.5rem;
+	padding-left: 1rem;
 }
 
 .playlist-song {

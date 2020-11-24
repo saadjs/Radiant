@@ -19,6 +19,7 @@ function App() {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [playlistStatus, setPlaylistStatus] = useState(false);
 	const audioRef = useRef(null);
+
 	const [time, setTime] = useState({
 		current: 0,
 		length: 0
@@ -29,6 +30,7 @@ function App() {
 		const length = e.target.duration;
 		setTime({ ...time, current, length });
 	};
+
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
 	}, [dispatch]);

@@ -17,13 +17,13 @@
 }
 
 #playlist-nav-btn {
+	/* margin-left: 5%; */
 	display: flex;
 	border: none;
 	background: transparent;
 	cursor: pointer;
-	padding: 0.5rem;
+	/* padding: 0.5rem; */
 	transition: all 0.3s ease;
-	font-family: "Ubuntu", sans-serif;
 }
 
 #navbar-home-btn {
@@ -43,4 +43,9 @@
 
 .playlist-heading-h3 {
 	margin-left: 0.5rem;
+}
+
+#playlist-nav-btn img {
+	width: 4rem;
+	margin: 0.25rem;
 }
