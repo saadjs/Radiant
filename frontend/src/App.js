@@ -40,7 +40,7 @@ function App() {
 			.then((data) => data.json())
 			.then((songsData) => {
 				setSongs(songsData);
-				setPlaying(songsData[5]);
+				setPlaying(songsData[0]);
 			});
 	}, []);
 
@@ -62,12 +62,14 @@ function App() {
 							<div>
 								<Song playing={playing} />
 								<SongControls
+									songs={songs}
 									audioRef={audioRef}
 									setIsPlaying={setIsPlaying}
 									isPlaying={isPlaying}
 									playing={playing}
 									setTime={setTime}
 									time={time}
+									setPlaying={setPlaying}
 								/>
 								<Playlist
 									playlistStatus={playlistStatus}
