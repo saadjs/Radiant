@@ -7,7 +7,6 @@ import {
 	faForward,
 	faBackward
 } from "@fortawesome/free-solid-svg-icons";
-import { playAudio } from "./util";
 
 function Controls({
 	playing,
@@ -58,22 +57,21 @@ function Controls({
 		});
 	};
 
-	const nextLastSongHandler = (skip) => {
+	const nextLastSongHandler = async (skip) => {
 		let currentIdx = songs.findIndex((song) => song.id === playing.id);
 		if (skip === "forward") {
-			setPlaying(songs[(currentIdx + 1) % songs.length]);
+			await setPlaying(songs[(currentIdx + 1) % songs.length]);
 		}
 		if (skip === "rewind") {
 			if ((currentIdx - 1) % songs.length === -1) {
-				setPlaying(songs[songs.length - 1]);
-				playAudio(isPlaying, audioRef);
+				await setPlaying(songs[songs.length - 1]);
+				if (isPlaying) audioRef.current.play();
+
 				return;
 			}
-			setPlaying(songs[(currentIdx - 1) % songs.length]);
+			await setPlaying(songs[(currentIdx - 1) % songs.length]);
 		}
-		playAudio(isPlaying, audioRef);
-
-		// console.log(currentIdx + 1);
+		if (isPlaying) audioRef.current.play();
 	};
 
 	// thanks stackoverflow!!!

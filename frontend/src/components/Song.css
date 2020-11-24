@@ -19,3 +19,9 @@
 .file-container h3 {
 	font-size: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+	.file-container img {
+		width: 60%;
+	}
+}

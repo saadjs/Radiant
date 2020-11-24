@@ -37,6 +37,12 @@ function App() {
 		setTime({ ...time, current, length, playTimePercent: animation });
 	};
 
+	const onEndedHandler = async () => {
+		let currentIdx = songs.findIndex((song) => song.id === playing.id);
+		await setPlaying(songs[(currentIdx + 1) % songs.length]);
+		if (isPlaying) audioRef.current.play();
+	};
+
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
 	}, [dispatch]);
@@ -91,6 +97,7 @@ function App() {
 									src={playing.mp3}
 									onTimeUpdate={timeUpdater}
 									onLoadedMetadata={timeUpdater}
+									onEnded={onEndedHandler}
 								></audio>
 							</div>
 						)}

@@ -1,5 +1,5 @@
 .control-container {
-	min-height: 10vh;
+	min-height: 20vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,11 +16,15 @@
 .timer {
 	width: 50%;
 	display: flex;
+	align-items: center;
 }
 
 .timer input {
 	width: 100%;
 	padding: 1rem 0rem;
+	-webkit-appearance: none;
+	background: transparent;
+	cursor: pointer;
 }
 
 .timer p {
@@ -50,8 +54,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .track {
-	background: blue;
 	width: 100%;
+	height: 1rem;
 	position: relative;
 	border-radius: 1rem;
 	overflow: hidden;
@@ -59,12 +63,22 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .animate-track {
-	background: grey;
+	background: whitesmoke;
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 	transform: translateX(0%);
+	padding: 1rem;
 	pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+	.timer {
+		width: 90%;
+	}
+	.play-pause {
+		width: 60%;
+	}
 }
