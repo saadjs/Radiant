@@ -36,7 +36,6 @@ function App() {
 		const roundedCurrent = Math.round(current);
 		const roundedLength = Math.round(length);
 		const animation = Math.round((roundedCurrent / roundedLength) * 100);
-		// console.log(animation);
 
 		setTime({ ...time, current, length, playTimePercent: animation });
 	};
