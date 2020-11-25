@@ -89,7 +89,7 @@ function Controls({
 					style={{
 						background: `linear-gradient(to left, ${
 							playing.art && playing.art[0]
-						},${playing.art[1]})`
+						},${playing.art && playing.art[1]})`
 					}}
 					className="track"
 				>

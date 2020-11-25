@@ -11,10 +11,10 @@ function Song({ playing }) {
 	return (
 		<div className="file-container">
 			<img src={playing.photo} alt={playing.songName} />
-			<h2 style={{ color: `${playing && playing.art[0]}` }}>
+			<h2 style={{ color: `${playing.art && playing.art[0]}` }}>
 				{playing.songName}
 			</h2>
-			<h3 style={{ color: `${playing && playing.art[0]}` }}>
+			<h3 style={{ color: `${playing.art && playing.art[0]}` }}>
 				{playing.artist}
 			</h3>
 		</div>
