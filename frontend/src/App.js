@@ -10,6 +10,7 @@ import SongControls from "./components/SongControls";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Playlist from "./components/Playlist";
 import InlineCSS from "./components/InlineCSS";
+import { useSelector } from "react-redux";
 
 function App() {
 	const dispatch = useDispatch();
@@ -26,6 +27,8 @@ function App() {
 		length: 0,
 		playTimePercent: 0
 	});
+
+	const sessionUser = useSelector((state) => state.session.user);
 
 	const timeUpdater = (e) => {
 		const current = e.target.currentTime;
@@ -65,7 +68,7 @@ function App() {
 					playlistStatus={playlistStatus}
 					setPlaylistStatus={setPlaylistStatus}
 				/>
-				<InlineCSS playing={playing} />
+				{sessionUser && <InlineCSS playing={playing} />}
 				<div
 					className={`${playlistStatus ? "playlist-active" : ""}`}
 					id="everything"

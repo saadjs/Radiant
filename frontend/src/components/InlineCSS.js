@@ -15,6 +15,7 @@ const InlineCSS = ({ playing }) => {
                 #main-main::after {
                     content: ' ';
                     background: url('${playing.photo}');
+                    transition: all 1s ease;
                     background-size: 100% 100%;
                     opacity: 0.2;
                     top: 0;
