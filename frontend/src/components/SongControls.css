@@ -75,11 +75,20 @@ input[type="range"]::-webkit-slider-thumb {
 	pointer-events: none;
 }
 
+@media screen and (min-width: 768px) {
+	.control-container {
+		padding-bottom: 10.4rem;
+	}
+}
+
 @media screen and (max-width: 768px) {
+	.control-container {
+		padding-bottom: 10.4rem;
+	}
 	.timer {
 		width: 90%;
 	}
 	.play-pause {
-		width: 60%;
+		width: 80%;
 	}
 }

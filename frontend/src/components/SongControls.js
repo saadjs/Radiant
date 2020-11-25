@@ -82,12 +82,14 @@ function Controls({
 		transform: `translateX(${time.playTimePercent}%)`
 	};
 	return (
-		<div className="control-container ">
+		<div className="control-container">
 			<div className="timer">
 				<p>{formattedTime(time.current)}</p>
 				<div
 					style={{
-						background: `linear-gradient(to left, ${playing.art[0]},${playing.art[1]})`
+						background: `linear-gradient(to left, ${
+							playing && playing.art[0]
+						},${playing.art[1]})`
 					}}
 					className="track"
 				>
@@ -103,7 +105,10 @@ function Controls({
 
 				<p>{time.length ? formattedTime(time.length) : "0:00"}</p>
 			</div>
-			<div className="play-pause" style={{ color: `${playing.art[0]}` }}>
+			<div
+				className="play-pause"
+				style={{ color: `${playing && playing.art[0]}` }}
+			>
 				<FontAwesomeIcon
 					onClick={() => nextLastSongHandler("rewind")}
 					className="rewind"
@@ -113,7 +118,7 @@ function Controls({
 				<FontAwesomeIcon
 					className="play"
 					onClick={play}
-					icon={isPlaying ? faPauseCircle : faPlayCircle}
+					icon={playing && isPlaying ? faPauseCircle : faPlayCircle}
 					size="2x"
 				/>
 				<FontAwesomeIcon

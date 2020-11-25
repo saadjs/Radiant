@@ -50,6 +50,7 @@
 }
 
 *::-webkit-scrollbar {
+	scrollbar-color: red;
 	width: 5px;
 }
 
