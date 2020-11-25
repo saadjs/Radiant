@@ -66,7 +66,7 @@ function App() {
 	}, [dispatch]);
 
 	return (
-		<div>
+		<div onDoubleClick={() => setPlaylistStatus(!playlistStatus)}>
 			<div id="main-main">
 				<Navigation
 					isLoaded={isLoaded}
