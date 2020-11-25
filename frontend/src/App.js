@@ -51,15 +51,11 @@ function App() {
 		fetch("/api/songs")
 			.then((data) => data.json())
 			.then((songsData) => {
-				console.log(songsData);
 				setSongs(songsData);
 				setPlaying(songsData[0]);
 			})
 			.catch((e) => console.error(e));
 	}, [dispatch]);
-
-	// useEffect(() => {
-	// }, []);
 
 	return (
 		<div>
