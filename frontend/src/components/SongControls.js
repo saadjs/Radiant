@@ -107,7 +107,7 @@ function Controls({
 			</div>
 			<div
 				className="play-pause"
-				style={{ color: `${playing && playing.art[0]}` }}
+				style={{ color: `${playing.art && playing.art[0]}` }}
 			>
 				<FontAwesomeIcon
 					onClick={() => nextLastSongHandler("rewind")}
