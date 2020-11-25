@@ -54,5 +54,10 @@
 	margin: 0.25rem;
 }
 
+#playlist-nav-btn {
+	border: none;
+	outline: none;
+}
+
 @media screen and (max-width: 768px) {
 }
