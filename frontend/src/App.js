@@ -48,9 +48,6 @@ function App() {
 
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
-	}, [dispatch]);
-
-	useEffect(() => {
 		fetch("/songs", {
 			headers: {
 				"Content-Type": "application/json",
@@ -62,7 +59,10 @@ function App() {
 				setSongs(songsData);
 				setPlaying(songsData[0]);
 			});
-	}, []);
+	}, [dispatch]);
+
+	// useEffect(() => {
+	// }, []);
 
 	return (
 		<div>
