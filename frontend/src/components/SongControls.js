@@ -21,19 +21,21 @@ function Controls({
 }) {
 	// element references
 	useEffect(() => {
-		const newSong = songs.map((song) => {
-			if (song.id === playing.id) {
-				return {
-					...song,
-					isPlaying: true
-				};
-			} else {
-				return {
-					...song,
-					isPlaying: false
-				};
-			}
-		});
+		const newSong =
+			songs &&
+			songs.map((song) => {
+				if (song.id === playing.id) {
+					return {
+						...song,
+						isPlaying: true
+					};
+				} else {
+					return {
+						...song,
+						isPlaying: false
+					};
+				}
+			});
 
 		setSongs(newSong);
 	}, [playing]);
