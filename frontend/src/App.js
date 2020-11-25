@@ -82,17 +82,20 @@ function App() {
 								render={() => (
 									<div>
 										<Song playing={playing} />
-										<SongControls
-											songs={songs}
-											audioRef={audioRef}
-											setIsPlaying={setIsPlaying}
-											isPlaying={isPlaying}
-											playing={playing}
-											setTime={setTime}
-											time={time}
-											setPlaying={setPlaying}
-											setSongs={setSongs}
-										/>
+										<div id="whole-player">
+											<SongControls
+												songs={songs}
+												audioRef={audioRef}
+												setIsPlaying={setIsPlaying}
+												isPlaying={isPlaying}
+												playing={playing}
+												setTime={setTime}
+												time={time}
+												setPlaying={setPlaying}
+												setSongs={setSongs}
+											/>
+										</div>
+
 										<Playlist
 											playlistStatus={playlistStatus}
 											songs={songs}

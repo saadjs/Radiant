@@ -63,7 +63,7 @@ input[type="range"]::-webkit-slider-thumb {
 	/* height: 1rem; */
 }
 
-.animate-track {
+.track-wrapper {
 	background: whitesmoke;
 	width: 100%;
 	height: 100%;

@@ -11,7 +11,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/6263175f6334ac348613790b863794010f2a9524-1024x1024.jpg",
 					artist: "Delayde, Webmoms",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=7967",
-					art: ["#403A92", "#71A183"],
+					art: ["#403A92", "#EE8BD4"],
 					isPlaying: true,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -22,7 +22,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/06/d9d8ae69141cb7838e3c53bbf393c6218285e384-1024x1024.jpg",
 					artist: "ØDYSSEE, Florent Garcia",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9285",
-					art: ["#14277F", "#05004D"],
+					art: ["#14277F", "#FEC8BD"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -33,7 +33,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/06/faa452681fe33146c42a1b422fdf7cd7fd082637-1024x1024.jpg",
 					artist: "xander.",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9052",
-					art: ["#693F3C", "#B58977"],
+					art: ["#693F3C", "#AB7174"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -44,7 +44,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/05/861564cb8a53229de4e63541a44f507c8b0da6ec-1024x1024.jpg",
 					artist: "Psalm Trees",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9021",
-					art: ["#1E2019", "#EA4729"],
+					art: ["#1E2019", "#C62C2A"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -55,7 +55,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/09/6defa6c89a6902fdd84bccd720c2b8fd29c40990-1024x1024.jpg",
 					artist: "Leavv",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9917",
-					art: ["#4A6B56", "#5B463E"],
+					art: ["#4A6B56", "#CAD28B"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -66,7 +66,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/10/23fdd99adc3e16abcb67b004ea3e748ebf433a49-1024x1024.jpg",
 					artist: "Aviino, Oliv",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=10452",
-					art: ["#285AA1", "#AA78B7"],
+					art: ["#285AA1", "#B066B2"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -77,7 +77,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/09/2899f7cc22ab12e17d0119819aac3ca9dbab46e6-1024x1024.jpg",
 					artist: "Philanthrope, The Field Tapes",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=10251",
-					art: ["#975B4E", "#FFFFFF"],
+					art: ["#975B4E", "#43482D"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -88,7 +88,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/10/efaa848553d09b4d9fc0752844456e41b34de276-1024x1024.jpg",
 					artist: "Tesk",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8137",
-					art: ["#6F69BB", "#C3F0EB"],
+					art: ["#6F69BB", "#A3DAED"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -99,7 +99,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/08/63d2d2cdabbc5df023603b5f47b2fb97963cb537-1024x1024.jpg",
 					artist: "Sitting Duck, squeeda",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9652",
-					art: ["#664232", "#63382B"],
+					art: ["#664232", "#6BCABC"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -110,7 +110,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/4fac6bb3a32f9e76b465990ba8d97d7db8a372f5-1024x1024.jpg",
 					artist: "Kendall Miles, H E R B",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9318",
-					art: ["#D8724F", "#0F0D0B"],
+					art: ["#D8724F", "#824544"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -121,7 +121,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/ae91385fc2d92e40dd4bf337867dee16fb5648d2-1024x1024.jpg",
 					artist: "Clap Cotton",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9447",
-					art: ["#465843", "#ADF1E1"],
+					art: ["#465843", "#9EEEE1"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -132,7 +132,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/edaf1202cf33c7a2a122b7494a7e4d3e643af45f-1024x1024.jpg",
 					artist: "Miscél",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=9305",
-					art: ["#AA476D", "#E58CB9"],
+					art: ["#AA476D", "#F1C6E2"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -143,7 +143,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/6263175f6334ac348613790b863794010f2a9524-1024x1024.jpg",
 					artist: "Delayde",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8547",
-					art: ["#4E2D7A", "#4C3B6A"],
+					art: ["#4E2D7A", "#ECA4DE"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -154,7 +154,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/858b533ba20ff95bf5b401089b195d1a8cb43870-1024x1024.jpg",
 					artist: "G Mills, Felty",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8971",
-					art: ["#1E2F55", "#1871B0"],
+					art: ["#1E2F55", "#EABD44"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -165,7 +165,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/05/260a909fca701bbb7593f5f8f9cff9508cca2856-1024x1024.jpg",
 					artist: "xander.",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=7955",
-					art: ["#CE354A", "#887C9D"],
+					art: ["#CE354A", "#596FB1"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -176,7 +176,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/05/299ed90790252c3b19e0b5ca350d1cf3a9c30436-1024x1024.jpg",
 					artist: "sadtoi",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8810",
-					art: ["#BF7448", "#BC7248"],
+					art: ["#BF7448", "#EECFB4"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -187,7 +187,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/04/6acdccd13d84220cc009a3f5073a1a41550c17cb-1024x1024.jpg",
 					artist: "mommy, Delayde",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8030",
-					art: ["#2D0140", "#C97DDD"],
+					art: ["#2D0140", "#62C8F8"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -198,7 +198,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/08/7ba352cafecae63aa3f09a52e125ea615d2c1f9b-1024x1024.jpg",
 					artist: "Aviino",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=7914",
-					art: ["#BFA250", "#E9F8FF"],
+					art: ["#BFA250", "#C0CD4E"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -209,7 +209,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/04/35317644d6db24c3ca144619d03f2805fa702472-1024x1024.jpg",
 					artist: "SwuM",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8008",
-					art: ["#49594A", "#758B7E"],
+					art: ["#49594A", "#D28A51"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -220,7 +220,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/8404541e3b694d16fd79433b142ed910f36764dd-1024x1024.jpg",
 					artist: "Cloudchord, G Mills",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8200",
-					art: ["#FC194A", "#011A22"],
+					art: ["#FC194A", "#41B3B3"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -231,7 +231,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/b5032cec4d341a4f7565e3c0fef5d7a6efeadc89-1024x1024.jpg",
 					artist: "weird inside",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8134",
-					art: ["#0C1382", "#84D1E3"],
+					art: ["#0C1382", "#3E8E84"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -242,7 +242,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/04/35a95878437b99e3384b023504b89403ae169707-1024x1024.jpg",
 					artist: "Philanthrope, Dayle",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8036",
-					art: ["#713224", "#45585E"],
+					art: ["#713224", "#E24528"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -253,7 +253,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/9ba130514bcb5697e8a9be6a93fa2c8fc88223d0-1024x1024.jpg",
 					artist: "No Spirit",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8068",
-					art: ["#8C5A63", "#4A2027"],
+					art: ["#8C5A63", "#ECD3D7"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -264,7 +264,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/50758f405d2aba9cd6e8c4e6cfce44e4d9893714-1024x1024.jpg",
 					artist: "Ian Ewing",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=7964",
-					art: ["#DE3868", "#CF3571"],
+					art: ["#DE3868", "#663664"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()
@@ -275,7 +275,7 @@ module.exports = {
 						"https://chillhop.com/wp-content/uploads/2020/07/0b2270e2865d7c9fb7ce840263bc6fb93f64f812-1024x1024.jpg",
 					artist: "Mr. Käfer, Makkako",
 					mp3: "https://mp3.chillhop.com/serve.php/?mp3=8910",
-					art: ["#6D8CBB", "#C15D6F"],
+					art: ["#6D8CBB", "#D87689"],
 					isPlaying: false,
 					createdAt: new Date(),
 					updatedAt: new Date()

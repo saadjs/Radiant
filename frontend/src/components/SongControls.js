@@ -100,7 +100,7 @@ function Controls({
 						onChange={dragSlider}
 						type="range"
 					/>
-					<div className="animate-track" style={trackAnim}></div>
+					<div className="track-wrapper" style={trackAnim}></div>
 				</div>
 
 				<p>{time.length ? formattedTime(time.length) : "0:00"}</p>
