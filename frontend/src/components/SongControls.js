@@ -88,7 +88,7 @@ function Controls({
 				<div
 					style={{
 						background: `linear-gradient(to left, ${
-							playing && playing.art[0]
+							playing.art && playing.art[0]
 						},${playing.art[1]})`
 					}}
 					className="track"
