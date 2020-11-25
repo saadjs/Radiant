@@ -19,7 +19,7 @@ function Controls({
 	setPlaying,
 	setSongs
 }) {
-	// element references
+	// set current song is Playing or not, do stuff accordingly
 	useEffect(() => {
 		const newSong =
 			songs &&
@@ -40,7 +40,7 @@ function Controls({
 		setSongs(newSong);
 	}, [playing]);
 
-	// Song Controls
+	// play/pause button handler
 	const play = () => {
 		if (isPlaying) {
 			audioRef.current.pause();
@@ -51,6 +51,7 @@ function Controls({
 		}
 	};
 
+	// time slider handler
 	const dragSlider = (e) => {
 		audioRef.current.currentTime = e.target.value;
 		setTime({
@@ -59,6 +60,7 @@ function Controls({
 		});
 	};
 
+	// forward and rewind button handler
 	const nextLastSongHandler = async (skip) => {
 		let currentIdx =
 			songs && songs.findIndex((song) => song.id === playing.id);
@@ -78,12 +80,15 @@ function Controls({
 	};
 
 	// thanks stackoverflow!!!
+	// format the playing time in min:sec format
 	const formattedTime = (time) =>
 		Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2);
 
+	// song progress bar increases according to the song play time
 	const trackAnim = {
 		transform: `translateX(${time.playTimePercent}%)`
 	};
+
 	return (
 		<div className="control-container">
 			<div className="timer">

@@ -5,14 +5,19 @@ import { NavLink, Redirect } from "react-router-dom";
 import "./LoginForm.css";
 
 function LoginFormPage() {
+	// redux dispatch
 	const dispatch = useDispatch();
+
+	// session user
 	const sessionUser = useSelector((state) => state.session.user);
 	const [credential, setCredential] = useState("");
 	const [password, setPassword] = useState("");
 	const [errors, setErrors] = useState([]);
 
+	// if use had already logged in, redirect to /songs else redirect to login page
 	if (sessionUser) return <Redirect to="/songs" />;
 
+	// user login submit handler
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setErrors([]);
@@ -23,7 +28,8 @@ function LoginFormPage() {
 		);
 	};
 
-	const loginDemo = (e) => {
+	// demo user login handler
+	const demoLoginHandler = (e) => {
 		dispatch(
 			sessionActions.login({
 				credential: "Demo-lition",
@@ -31,7 +37,6 @@ function LoginFormPage() {
 			})
 		);
 	};
-	// const onClick = () => history.push("/songs");
 
 	return (
 		<div id="main-holder">
@@ -49,7 +54,6 @@ function LoginFormPage() {
 			<form id="login-form" onSubmit={handleSubmit}>
 				<input
 					type="text"
-					// value={credential}
 					onChange={(e) => setCredential(e.target.value)}
 					required
 					id="username-field"
@@ -58,7 +62,6 @@ function LoginFormPage() {
 				<input
 					type="password"
 					autoComplete="on"
-					// value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					required
 					id="password-field"
@@ -68,13 +71,12 @@ function LoginFormPage() {
 					type="submit"
 					value="I DARE TO ENTER"
 					id="login-form-submit"
-					// onClick={onClick}
 				/>
 				<input
 					id="login-form-submit-demo"
 					type="button"
 					value="Login as Demo"
-					onClick={loginDemo}
+					onClick={demoLoginHandler}
 				/>
 			</form>
 			<NavLink id="sign-up-link" to="/signup">

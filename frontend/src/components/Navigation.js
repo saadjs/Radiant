@@ -6,31 +6,26 @@ import * as sessionActions from "./../store/session";
 import { useSelector } from "react-redux";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGuitar } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 	const dispatch = useDispatch();
+
+	// use history: on logout button press, take user to the login page
 	const history = useHistory();
 
 	const sessionUser = useSelector((state) => state.session.user);
 
+	// logout handler
 	const logout = (e) => {
 		e.preventDefault();
 		dispatch(sessionActions.logout());
+		// back to login page
 		history.push("/login");
 	};
 
 	return (
 		<>
 			<Navbar>
-				{/* <Navbar.Brand
-					href="/"
-					className="navbar-home"
-					id="navbar-home-btn"
-				>
-					Home
-				</Navbar.Brand> */}
 				{sessionUser && (
 					<button
 						id="playlist-nav-btn"
@@ -41,8 +36,6 @@ function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 							src="https://www.freelogodesign.org/file/app/client/thumb/2b78cf08-0ba2-48a6-acc4-4eb188527d65_200x200.png?1606005029119"
 							alt="logo"
 						/>
-						{/* <FontAwesomeIcon size="3x" icon={faGuitar} /> */}
-						{/* <h3 className="playlist-heading-h3">Playlist</h3> */}
 					</button>
 				)}
 				<Navbar.Toggle />

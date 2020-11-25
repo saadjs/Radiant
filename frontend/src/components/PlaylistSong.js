@@ -13,8 +13,8 @@ function PlaylistSong({
 }) {
 	const playSong = async () => {
 		const selectedSong = songs.filter((state) => state.id === id);
-		await setPlaying(selectedSong[0]);
 
+		await setPlaying(selectedSong[0]);
 		const newSong = songs.map((song) => {
 			if (song.id === id) {
 				return {
@@ -28,8 +28,9 @@ function PlaylistSong({
 				};
 			}
 		});
-
+		// set the state to the currently playing song
 		setSongs(newSong);
+		// if the last song was already playing, automatically play the next song
 		if (isPlaying) audioRef.current.play();
 	};
 	return (

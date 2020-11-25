@@ -5,8 +5,9 @@ import { Redirect } from "react-router-dom";
 import "./Song.css";
 
 function Song({ playing }) {
+	// check if user has logged in
 	const sessionUser = useSelector((state) => state.session.user);
-
+	// if not logged in, redirect to the login page
 	if (!sessionUser) return <Redirect to="/login" />;
 	return (
 		<div className="file-container">

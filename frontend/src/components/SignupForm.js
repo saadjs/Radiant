@@ -6,16 +6,21 @@ import * as sessionActions from "../store/session";
 import "./SignUpForm.css";
 
 function SignupFormPage() {
+	// redux
 	const dispatch = useDispatch();
 	const sessionUser = useSelector((state) => state.session.user);
+
+	// all the states for user login and errors
 	const [email, setEmail] = useState("");
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [errors, setErrors] = useState([]);
 
+	// if user is already logged in, redirect to the home, currently the home route is the /songs route
 	if (sessionUser) return <Redirect to="/" />;
 
+	// sign up button submit handler
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (password === confirmPassword) {
