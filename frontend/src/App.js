@@ -48,7 +48,7 @@ function App() {
 
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
-		fetch("/songs")
+		fetch("/api/songs")
 			.then((data) => data.json())
 			.then((songsData) => {
 				console.log(songsData);

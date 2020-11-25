@@ -9,7 +9,7 @@ const { ValidationError } = require("sequelize");
 const routes = require("./routes");
 
 // get all the songs route
-const songsRoute = require("./routes/api/songs");
+// const songsRoute = require("./routes/api/songs");
 
 const { environment } = require("./config");
 const isProduction = environment === "production";
@@ -47,7 +47,7 @@ app.use(
 app.use(routes); // Connect all the routes
 
 // use the song route
-app.use("/songs", songsRoute);
+// app.use("/songs", songsRoute);
 
 // Catch unhandled requests and forward to error handler.
 app.use((_req, _res, next) => {
