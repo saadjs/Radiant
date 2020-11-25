@@ -51,7 +51,7 @@ function App() {
 	}, [dispatch]);
 
 	useEffect(() => {
-		fetch("http://localhost:8000/songs")
+		fetch("/songs")
 			.then((data) => data.json())
 			.then((songsData) => {
 				setSongs(songsData);
