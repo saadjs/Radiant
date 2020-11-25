@@ -51,7 +51,12 @@ function App() {
 	}, [dispatch]);
 
 	useEffect(() => {
-		fetch("/songs")
+		fetch("/songs", {
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json"
+			}
+		})
 			.then((data) => data.json())
 			.then((songsData) => {
 				setSongs(songsData);
