@@ -60,7 +60,8 @@ function Controls({
 	};
 
 	const nextLastSongHandler = async (skip) => {
-		let currentIdx = songs.findIndex((song) => song.id === playing.id);
+		let currentIdx =
+			songs && songs.findIndex((song) => song.id === playing.id);
 		if (skip === "forward") {
 			await setPlaying(songs[(currentIdx + 1) % songs.length]);
 		}
