@@ -54,7 +54,8 @@ function App() {
 				console.log(songsData);
 				setSongs(songsData);
 				setPlaying(songsData[0]);
-			});
+			})
+			.catch((e) => console.error(e));
 	}, [dispatch]);
 
 	// useEffect(() => {
