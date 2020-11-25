@@ -48,14 +48,10 @@ function App() {
 
 	useEffect(() => {
 		dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
-		fetch("/songs", {
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json"
-			}
-		})
+		fetch("/songs")
 			.then((data) => data.json())
 			.then((songsData) => {
+				console.log(songsData);
 				setSongs(songsData);
 				setPlaying(songsData[0]);
 			});
