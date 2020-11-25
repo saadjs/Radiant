@@ -9,6 +9,7 @@ import Song from "./components/Song";
 import SongControls from "./components/SongControls";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Playlist from "./components/Playlist";
+import InlineCSS from "./components/InlineCSS";
 
 function App() {
 	const dispatch = useDispatch();
@@ -57,62 +58,65 @@ function App() {
 	}, []);
 
 	return (
-		<>
-			<Navigation
-				isLoaded={isLoaded}
-				playlistStatus={playlistStatus}
-				setPlaylistStatus={setPlaylistStatus}
-			/>
-			<div
-				className={`${playlistStatus ? "playlist-active" : ""}`}
-				id="everything"
-			>
-				{isLoaded && (
-					<Switch>
-						<Route path="/signup" component={SignupFormPage} />
+		<div>
+			<div id="main-main">
+				<Navigation
+					isLoaded={isLoaded}
+					playlistStatus={playlistStatus}
+					setPlaylistStatus={setPlaylistStatus}
+				/>
+				<InlineCSS playing={playing} />
+				<div
+					className={`${playlistStatus ? "playlist-active" : ""}`}
+					id="everything"
+				>
+					{isLoaded && (
+						<Switch>
+							<Route path="/signup" component={SignupFormPage} />
 
-						<Route
-							path="/songs"
-							render={() => (
-								<div>
-									<Song playing={playing} />
-									<SongControls
-										songs={songs}
-										audioRef={audioRef}
-										setIsPlaying={setIsPlaying}
-										isPlaying={isPlaying}
-										playing={playing}
-										setTime={setTime}
-										time={time}
-										setPlaying={setPlaying}
-										setSongs={setSongs}
-									/>
-									<Playlist
-										playlistStatus={playlistStatus}
-										songs={songs}
-										setSongs={setSongs}
-										setPlaying={setPlaying}
-										audioRef={audioRef}
-										isPlaying={isPlaying}
-									/>
-									<audio
-										ref={audioRef}
-										src={playing.mp3}
-										onTimeUpdate={timeUpdater}
-										onLoadedMetadata={timeUpdater}
-										onEnded={onEndedHandler}
-									></audio>
-								</div>
-							)}
-						/>
+							<Route
+								path="/songs"
+								render={() => (
+									<div>
+										<Song playing={playing} />
+										<SongControls
+											songs={songs}
+											audioRef={audioRef}
+											setIsPlaying={setIsPlaying}
+											isPlaying={isPlaying}
+											playing={playing}
+											setTime={setTime}
+											time={time}
+											setPlaying={setPlaying}
+											setSongs={setSongs}
+										/>
+										<Playlist
+											playlistStatus={playlistStatus}
+											songs={songs}
+											setSongs={setSongs}
+											setPlaying={setPlaying}
+											audioRef={audioRef}
+											isPlaying={isPlaying}
+										/>
+										<audio
+											ref={audioRef}
+											src={playing.mp3}
+											onTimeUpdate={timeUpdater}
+											onLoadedMetadata={timeUpdater}
+											onEnded={onEndedHandler}
+										></audio>
+									</div>
+								)}
+							/>
 
-						<Route path="/" component={LoginFormPage} />
+							<Route path="/" component={LoginFormPage} />
 
-						<Route exact path="/" component={LoginFormPage} />
-					</Switch>
-				)}
+							<Route exact path="/" component={LoginFormPage} />
+						</Switch>
+					)}
+				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 

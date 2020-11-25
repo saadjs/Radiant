@@ -5,10 +5,14 @@
 	padding: 3px;
 	margin: 3px;
 }
+#hello-user-text {
+	color: black;
+	font-weight: 100;
+}
 
 .logout-input-button {
 	background-color: rgb(206, 228, 255);
-	color: grey;
+	color: rgb(150, 141, 141);
 	border: 1px solid rgb(235, 188, 34);
 	transition: all 0.3s ease;
 }
@@ -46,7 +50,7 @@
 }
 
 #playlist-nav-btn img {
-	width: 4rem;
+	width: 5rem;
 	margin: 0.25rem;
 }
 

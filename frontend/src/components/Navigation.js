@@ -48,7 +48,10 @@ function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
 					{sessionUser && (
-						<Navbar.Text className="hello-user-text">
+						<Navbar.Text
+							className="hello-user-text"
+							id="hello-user-text"
+						>
 							{`Hello, ${
 								sessionUser.username.charAt(0).toUpperCase() +
 								sessionUser.username.slice(1)

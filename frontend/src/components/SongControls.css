@@ -59,6 +59,7 @@ input[type="range"]::-webkit-slider-thumb {
 	position: relative;
 	border-radius: 1rem;
 	overflow: hidden;
+	border: 1px solid black;
 	/* height: 1rem; */
 }
 
