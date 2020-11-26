@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./SongControls.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faPlayCircle,
 	faPauseCircle,
 	faForward,
-	faBackward
+	faBackward,
+	faVolumeDown,
+	faVolumeUp,
+	faVolumeMute
 } from "@fortawesome/free-solid-svg-icons";
 
 function Controls({
@@ -20,6 +23,9 @@ function Controls({
 	setSongs
 }) {
 	// set current song is Playing or not, do stuff accordingly
+	const [volume, setVolume] = useState({
+		currentVolume: 1
+	});
 	useEffect(() => {
 		const newSong =
 			songs &&
@@ -57,6 +63,16 @@ function Controls({
 		setTime({
 			...time,
 			current: e.target.value
+		});
+	};
+
+	// volume handler
+	const handleVolume = (e) => {
+		console.log(e.target.value);
+		audioRef.current.volume = e.target.value;
+		setVolume({
+			...volume,
+			currentVolume: e.target.value
 		});
 	};
 
@@ -134,6 +150,45 @@ function Controls({
 					className="forward"
 					icon={faForward}
 					size="2x"
+				/>
+			</div>
+			<div
+				style={{
+					display: "flex",
+					width: "500px",
+					border: "1px solid red"
+				}}
+			>
+				<FontAwesomeIcon
+					onClick={() => {
+						if (volume.currentVolume) {
+							audioRef.current.volume = 0;
+							setVolume({ ...volume, currentVolume: 0 });
+						} else if (!volume.currentVolume) {
+							audioRef.current.volume = 0.5;
+							setVolume({ ...volume, currentVolume: 0.5 });
+						}
+					}}
+					icon={
+						volume.currentVolume >= 0.5
+							? faVolumeUp
+							: volume.currentVolume < 0.5 &&
+							  volume.currentVolume > 0
+							? faVolumeDown
+							: faVolumeMute
+					}
+					size="2x"
+				/>
+				<input
+					style={{
+						border: "1px solid blue"
+					}}
+					type="range"
+					onChange={handleVolume}
+					value={volume.currentVolume}
+					min={0}
+					max={1.0}
+					step={0.01}
 				/>
 			</div>
 		</div>
