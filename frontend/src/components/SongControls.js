@@ -26,6 +26,7 @@ function Controls({
 	const [volume, setVolume] = useState({
 		currentVolume: 1
 	});
+
 	useEffect(() => {
 		const newSong =
 			songs &&
@@ -65,17 +66,14 @@ function Controls({
 			current: e.target.value
 		});
 	};
-
 	// volume handler
 	const handleVolume = (e) => {
-		console.log(e.target.value);
 		audioRef.current.volume = e.target.value;
 		setVolume({
 			...volume,
 			currentVolume: e.target.value
 		});
 	};
-
 	// forward and rewind button handler
 	const nextLastSongHandler = async (skip) => {
 		let currentIdx =
@@ -153,13 +151,11 @@ function Controls({
 				/>
 			</div>
 			<div
-				style={{
-					display: "flex",
-					width: "500px",
-					border: "1px solid red"
-				}}
+				id="volume-controls"
+				style={{ color: `${playing.art && playing.art[0]}` }}
 			>
 				<FontAwesomeIcon
+					id="fa-volume-icon"
 					onClick={() => {
 						if (volume.currentVolume) {
 							audioRef.current.volume = 0;
@@ -180,9 +176,7 @@ function Controls({
 					size="2x"
 				/>
 				<input
-					style={{
-						border: "1px solid blue"
-					}}
+					id="volume-control-slider"
 					type="range"
 					onChange={handleVolume}
 					value={volume.currentVolume}

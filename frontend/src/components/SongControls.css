@@ -47,11 +47,6 @@
 input[type="range"]:focus {
 	outline: none;
 }
-input[type="range"]::-webkit-slider-thumb {
-	/* -webkit-appearance: none; */
-	height: 16px;
-	width: 16px;
-}
 
 .track {
 	width: 100%;
@@ -74,6 +69,27 @@ input[type="range"]::-webkit-slider-thumb {
 	pointer-events: none;
 }
 
+#volume-controls {
+	margin: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+}
+#volume-control-slider {
+	margin-left: 20px;
+	height: 10px;
+	opacity: 0.8;
+	background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+	cursor: pointer;
+}
+
+#fa-volume-icon {
+	width: 25px;
+	height: 25px;
+	margin: 0.5rem;
+}
 @media screen and (min-width: 768px) {
 	.control-container {
 		padding-bottom: 10.4rem;
@@ -86,6 +102,9 @@ input[type="range"]::-webkit-slider-thumb {
 	}
 	.timer {
 		width: 90%;
+	}
+	#volume-controls {
+		width: 30%;
 	}
 	.play-pause {
 		width: 80%;
