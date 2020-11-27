@@ -16,13 +16,24 @@ Radiant is a music app built using React, Redux for the frontend and Express, Po
 2. Song Library
 
     - List of all the songs
+    - Play/Choose the song from the library
+    - Highlight the currenty playing song in the library
 
-3. Play a Song
-4. Pause a Song
-5. Fast Forward a Song
-6. Rewind a Song
-7. Go to the Next Song
-8. Go to the Last Song
+3. Songs Controls
+
+    - Play the song
+    - Pause the song
+    - Go to the next song
+    - Go to the last song
+    - Rewind the song
+    - Fast forward the song
+    - Show song playtime and total length
+    - Progress of the current song on the progress bar
+
+4. Control Song Volume
+
+    - Increase/Decrease the volume
+    - Mute/Unmute
 
 _Extras_
 
