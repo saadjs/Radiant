@@ -6,7 +6,7 @@ Radiant is a music app built using React, Redux for the frontend and Express, Po
 
 ## Checkout the live App @ [Radiant Music App](https://radiant-music.herokuapp.com/)
 
-### Sneak peek
+### Sneak peek 🙈
 
 ![](./frontend/src/images/player-img.png)
 
