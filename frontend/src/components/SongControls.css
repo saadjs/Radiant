@@ -86,6 +86,7 @@ input[type="range"]:focus {
 }
 
 #fa-volume-icon {
+	cursor: pointer;
 	width: 25px;
 	height: 25px;
 	margin: 0.5rem;
