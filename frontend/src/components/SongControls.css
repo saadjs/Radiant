@@ -78,6 +78,7 @@ input[type="range"]:focus {
 	width: 20%;
 }
 #volume-control-slider {
+	border-radius: 1rem;
 	margin-left: 20px;
 	height: 10px;
 	opacity: 0.8;
@@ -85,6 +86,15 @@ input[type="range"]:focus {
 	cursor: pointer;
 }
 
+#volume-control-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #fdc699;
+	/* margin-top: -4px; */
+}
 #fa-volume-icon {
 	cursor: pointer;
 	width: 25px;
