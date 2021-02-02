@@ -1,20 +1,25 @@
 .logout-input-button,
 .navbar-home,
 .hello-user-text {
-	font-family: "Ubuntu", sans-serif;
+	font-family: 'Kaushan Script', cursive;
 	padding: 3px;
 	margin: 3px;
 }
 #hello-user-text {
-	color: black;
-	font-weight: 100;
+	color: #CC7457;
+	font-weight: 400;
+	font-size: 1.25rem;
 }
 
 .logout-input-button {
 	background-color: rgb(206, 228, 255);
 	color: rgb(150, 141, 141);
 	border: 1px solid rgb(235, 188, 34);
+	border-radius: 10px;
 	transition: all 0.3s ease;
+	margin: 10px;
+	padding: 5px;
+	width: 100px;
 }
 .logout-input-button:hover {
 	background-color: rgb(255, 157, 180);
