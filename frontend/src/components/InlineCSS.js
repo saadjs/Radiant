@@ -10,6 +10,7 @@ const InlineCSS = ({ playing }) => {
                     height: 100%;
                     display: block;
                     position: relative;
+                    height: 100vh;
                 }
 
                 #main-main::after {
