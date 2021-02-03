@@ -1,11 +1,23 @@
 #main-holder {
-	min-height: 80vh;
-	min-width: 40vw;
+	margin-top: 30rem;
+	margin-right: 5rem;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	font-family: "Ubuntu", sans-serif;
+}
+
+#main-holder::after {
+	background: url("./../images/radiant-music.jpg");
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	content: "";
+	opacity: 0.6;
 }
 
 #login-form {
@@ -29,15 +41,30 @@
 #sign-up-link {
 	margin: 5px;
 	font-size: 20px;
+	color: #fbfffd;
+	font-family: "Kaushan Script", cursive;
 }
 
 #login-form-submit,
 #login-form-submit-demo {
 	justify-content: center;
-	font-family: "Ubuntu", sans-serif;
+	font-family: "Kaushan Script", cursive;
 	font-size: 1em;
+	background-color: #CC7457;
+	color: whitesmoke;
+	outline: none;
+	border: none;
 }
 
 #login-heading {
-	color: rgba(198, 46, 0, 0.8);
+	color: #fbfffd;
+	width: 15rem;
+	height: 5rem;
+	text-align: center;
+	font-size: 3rem;
+	font-family: "Kaushan Script", cursive;
+	font-weight: 400;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #82d9f1;
 }
