@@ -101,11 +101,11 @@ input[type="range"]:focus {
 	height: 25px;
 	margin: 0.5rem;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 	.control-container {
 		padding-bottom: 10.4rem;
 	}
-}
+} */
 
 @media screen and (max-width: 768px) {
 	.control-container {

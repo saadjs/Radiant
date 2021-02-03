@@ -21,7 +21,7 @@ function App() {
 	const [songs, setSongs] = useState();
 	const [playing, setPlaying] = useState([]);
 	const [isPlaying, setIsPlaying] = useState(false);
-	const [playlistStatus, setPlaylistStatus] = useState(false);
+	const [playlistStatus, setPlaylistStatus] = useState(true);
 	const [time, setTime] = useState({
 		current: 0,
 		length: 0,

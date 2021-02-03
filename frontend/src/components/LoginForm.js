@@ -40,12 +40,7 @@ function LoginFormPage() {
 
 	return (
 		<div id="main-holder">
-			<img
-				id="logo-img"
-				src="https://www.freelogodesign.org/file/app/client/thumb/2b78cf08-0ba2-48a6-acc4-4eb188527d65_200x200.png?1606005029119"
-				alt="logo"
-			/>
-			<h1 id="login-heading">Login</h1>
+			<h1 id="login-heading">Login</h1> 
 			<div id="login-error-msg-holder">
 				{errors.map((error, idx) => (
 					<p key={idx}>{error}</p>
