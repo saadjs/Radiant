@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, Redirect } from "react-router-dom";
 import * as sessionActions from "../store/session";
+import logo from "../images/logo.jpeg";
 
 import "./SignUpForm.css";
 
@@ -32,17 +33,13 @@ function SignupFormPage() {
 			});
 		}
 		return setErrors([
-			"Confirm Password field must be the same as the Password field"
+			"Confirm Password field must be the same as the Password field",
 		]);
 	};
 
 	return (
 		<div className="signup-container">
-			<img
-				id="logo-img"
-				src="https://www.freelogodesign.org/file/app/client/thumb/2b78cf08-0ba2-48a6-acc4-4eb188527d65_200x200.png?1606005029119"
-				alt="logo"
-			/>
+			<img id="logo-img" src={logo} alt="logo" />
 			<h1 id="signup-heading">Sign Up</h1>
 			<div className="signup-error-msg-holder">
 				<ul>

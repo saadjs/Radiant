@@ -6,6 +6,7 @@ import * as sessionActions from "./../store/session";
 import { useSelector } from "react-redux";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
+import logo from "../images/logo.jpeg";
 
 function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 	const dispatch = useDispatch();
@@ -31,10 +32,7 @@ function Navigation({ isLoaded, playlistStatus, setPlaylistStatus }) {
 						id="playlist-nav-btn"
 						onClick={() => setPlaylistStatus(!playlistStatus)}
 					>
-						<img
-							src="https://www.freelogodesign.org/file/app/client/thumb/2b78cf08-0ba2-48a6-acc4-4eb188527d65_200x200.png?1606005029119"
-							alt="logo"
-						/>
+						<img src={logo} alt="logo" />
 					</button>
 				)}
 				<Navbar.Toggle />
